@@ -1,0 +1,15 @@
+---
+# tasks file for roles/docker
+- name: Install epel repo, python and pip
+  yum:
+    name:
+        - epel-release
+        - python
+        - python-pip
+    state: present
+
+- name: Install python lib for docker
+  pip: 
+    name: docker
+    state: present
+

@@ -1,0 +1,11 @@
+- name: Setup nginx balancer and web_app instances in docker containers
+  hosts: host-1
+ 
+  vars:
+        web_servers:
+               app_1: 5081 
+               app_2: 5082 
+               app_3: 5083
+  roles:
+        - role: web
+        - role: nginx
