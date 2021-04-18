@@ -6,6 +6,8 @@
                app_1: 5081 
                app_2: 5082 
                app_3: 5083
+        network_name: web
+        
   roles:
         - role: web
         - role: nginx

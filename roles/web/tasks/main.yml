@@ -20,7 +20,7 @@
       - "{{ item.value }}:5000"
     hostname: "{{ item.key }}"
     networks:
-      - name: web 
+      - name: "{{ network_name }}" 
         links: "{{ web_servers.keys() | list }}"
     state: started
   loop: "{{ web_servers | dict2items }}"
