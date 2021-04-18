@@ -13,7 +13,7 @@ pipeline {
                 ansiblePlaybook(
                     credentialsId: 'ssh_ansible', 
                     vaultCredentialsId: 'vault_pass',
-                    sudoUser: 'admin'
+                    sudoUser: 'admin',
                     sudo: true, 
                     inventory: 'hosts', 
                     playbook: 'Playbook.yml')
