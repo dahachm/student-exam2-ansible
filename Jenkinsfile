@@ -12,9 +12,7 @@ pipeline {
 
                 ansiblePlaybook(
                     credentialsId: 'ssh_ansible', 
-                    vaultCredentialsId: 'vault_pass',
-                    sudoUser: 'admin',
-                    sudo: true, 
+                    vaultCredentialsId: 'vault_pass', 
                     inventory: 'hosts', 
                     playbook: 'Playbook.yml')
             }
@@ -36,3 +34,4 @@ pipeline {
         }
     }       
 }
+

@@ -1,6 +1,7 @@
 - name: Setup nginx balancer and web_app instances in docker containers
   hosts: host-1
- 
+  become: yes
+  
   vars:
         web_servers:
                app_1: 5081 
