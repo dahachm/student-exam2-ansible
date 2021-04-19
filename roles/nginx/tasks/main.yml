@@ -17,11 +17,10 @@
         type: bind
     hostname: nginx
     ports:
-        - "9000:80"
+        - "10000:80"
     networks:
       - name: "{{ network_name }}" 
         links: "{{ web_servers.keys() | list }}"
-    container_default_behavior: compatibility
     state: started
     recreate: yes
 
