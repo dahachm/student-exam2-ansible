@@ -11,7 +11,7 @@ pipeline {
             steps {
 
                 ansiblePlaybook(
-                    credentialsId: 'ssh_ansible', 
+                    credentialsId: 'ssh_agent', 
                     vaultCredentialsId: 'vault_pass', 
                     inventory: 'hosts', 
                     playbook: 'Playbook.yml')
